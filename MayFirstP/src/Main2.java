@@ -36,3 +36,4 @@ public class Main2 {
         System.out.println("O perímetro do retângulo é: " + ((altura*2) + (largura*2)));
     }
 }
+
