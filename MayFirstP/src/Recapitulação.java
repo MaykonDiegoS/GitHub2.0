@@ -1,3 +1,4 @@
+
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -148,5 +149,33 @@ public class Recapitulação {
 
         String[] splitted = var3.split(" ");//irá quebrar o texto no delimitador informado e
                                                     // retornar uma lista dos textos adquiridos
+        for(String word : splitted) {
+       System.out.println(word);
+        }
+        System.out.println(var3.substring(5, 8));
     }
-}
+
+//        int[] numbers = {0,1,2,3,4,5,6,7,8,9}; //iniciando uma lista com valores
+//        int[] numbers = new int[10];//iniciando lista vazia
+//
+//        System.out.println(numbers[6]); //recuperando um valor da lista
+//        numeros2[4] = sc.nextInt(); // inserindo um valor no array
+//        System.out.println(numeros.length);//pegando a quantidade de itens
+//        System.out.println(numeros); //dá erro ao imprimir
+//        for(int i = 0; 1 < numeros.length; 1++) {
+//        System.out.println(numeros[i]);
+//        }
+//
+//        int[][] numeros3 = {{0,1,2,3,4},{56789}}; //iniciando uma matriz com valores
+//        int[][] numeros4 = new int[2][5];//iniciando uma matriz sem valores
+//        System.out.println(numeros3[0][2]);//recurperando um valor de uma matriz
+//        numeros4[1] = new int[]{7,8,9,0}; //inserindo uma lista em uma linha da matriz
+//        numeros4[0][0] = 9; //inserindo dados em uma posição da matriz
+//
+//        System.out.println(numeros3.length);//numero de linhas da matriz
+//        System.out.println(numeros3[0].length);//quantidade de itens na linha da matriz
+//
+//        for(int = 0; i < numeros3.length; i++){
+//        for(int j = 0; j < numeros3[i].length; j++ {
+//            System.out.println(numeros3[i][j]);
+        }
