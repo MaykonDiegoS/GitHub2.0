@@ -4,22 +4,13 @@ import java.util.Scanner;
 
 public class Desafio5 {
     public static void main(String[] args) {
-        {
-
-            public static void main( String[] args ) {
-            int a, b, c = 0;
-            Scanner s = new Scanner( System.in );
-            System.out.println( "Introduce dos números: ");
-            a = s.nextInt();
-            b = s.nextInt();
-            c = a + b;
-            System.out.println( "La suma de a y b es: " + c );
-        }
-
-        }
-
+            Scanner in = new Scanner(System.in);
+            int soma = 0;
+            for (int i = 0; i < 5; i++) {
+                System.out.print("Informe um número: ");
+                soma += in.nextInt();
+            }
+            System.out.println("A soma é: " + soma);
         }
     }
 
-
-}

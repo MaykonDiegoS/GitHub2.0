@@ -33,9 +33,10 @@ public class Recapitulação {
 
         //entrada - entrada de usuário PELO CONSOLE
         Scanner sc = new Scanner(System.in);
-        sc.next(); // espera o usuário digitar, pega tudo o que foi digitado.
+        sc.next(); // espera o usuário digitar, pega um caracter o que foi digitado.
         sc.nextInt(); // espera o usuário digitar, pega valores inteiros.
         sc.nextDouble(); //espera o usuário digitar, pega valores decimais.
+        sc.nextLine(); //retorna tudo que tiver digitado, e avança
 
         //operações aritméticas
         var1 = 10 + 10; //soma
@@ -152,7 +153,7 @@ public class Recapitulação {
         for(String word : splitted) {
        System.out.println(word);
         }
-        System.out.println(var3.substring(5, 8));
+        System.out.println(var3.substring(5, 8));// primeiro é inclusivo, segundo é exclusivo
     }
 
 //        int[] numbers = {0,1,2,3,4,5,6,7,8,9}; //iniciando uma lista com valores
@@ -177,5 +178,5 @@ public class Recapitulação {
 //
 //        for(int = 0; i < numeros3.length; i++){
 //        for(int j = 0; j < numeros3[i].length; j++ {
-//            System.out.println(numeros3[i][j]);
+//    System.out.println(numeros3[i][j]);
         }
