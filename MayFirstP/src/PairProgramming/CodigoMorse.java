@@ -28,9 +28,9 @@ public class CodigoMorse {
             System.out.println("Codificar ou Decodificar? C ou D");
             String codOuDecod = confereLetra("C", "D");
 
-            if(codOuDecod.equalsIgnoreCase("C")) {
+            if (codOuDecod.equalsIgnoreCase("C")) {
                 codificar(alfanumerico, codigoMorse);
-            }else {
+            } else {
                 decodificar(alfanumerico, codigoMorse);
             }
             System.out.println("Continuar? S ou N");
@@ -46,6 +46,7 @@ public class CodigoMorse {
         Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
         return pattern.matcher(normalizer).replaceAll("");
     }
+
     //Método para conferir se letra é válida
     public static String confereLetra(String a, String b) {
         String continua;
@@ -59,6 +60,7 @@ public class CodigoMorse {
             System.out.println("Escreva " + a + " ou " + b);
         }
     }
+
     //Método para o codificar o texto
     public static void codificar(String alfanumerico, String[] codigoMorse) {
         //Armazena texto informado
@@ -78,6 +80,7 @@ public class CodigoMorse {
         }
         System.out.println("\n");
     }
+
     //Método para decodificar o código
     public static void decodificar(String alfanumerico, String[] codigoMorse) {
         //Armazena código informado
