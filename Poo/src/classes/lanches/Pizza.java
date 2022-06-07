@@ -4,12 +4,8 @@ public class Pizza extends MiniPizza{
 
     private String tamanho;
     public Pizza() {
-        this.setTipo("Pizza");
-    }
 
-    public void montarComanda() {
-        super.montarComanda();
-        System.out.println("-- TAMANHO: " + this.getTamanho().toUpperCase() + " --");
+        this.setTipo("Pizza");
     }
 
     public void setTamanho(String tamanho) {
