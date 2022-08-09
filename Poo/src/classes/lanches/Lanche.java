@@ -1,36 +1,38 @@
 package classes.lanches;
 
-public abstract class Lanche {
-    private String[] ingredientes = new String[10];
-    private double valor;
+import java.util.ArrayList;
+import java.util.Scanner;
 
+public abstract class Lanche {
+    private ArrayList<String> ingredientes = new ArrayList<>();
+    private double valor;
     private String tipo;
 
-
     public void adicionarIngrediente(String ingrediente) {
-        for(int i = 0; i < 10; i++) {
-            if(this.ingredientes[i] == null) {
-                this.ingredientes[i] = ingrediente;
-                break;
-            }
-        }
+        this.ingredientes.add(ingrediente);
     }
 
-    public String[] getIngredientes() {
+    public abstract void mostrarDetalhesComanda();
+
+    public abstract void montarDetalhesLanche(Scanner in);
+
+    public ArrayList<String> getIngredientes() {
         return ingredientes;
     }
+
+    public double getValor() {
+        return valor;
+    }
+
     public void setValor(double valor) {
         this.valor = valor;
     }
-    public double getValor() {
-        return this.valor;
+
+    public String getTipo() {
+        return tipo;
     }
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
-    }
-
-    public String getTipo() {
-        return this.tipo;
     }
 }

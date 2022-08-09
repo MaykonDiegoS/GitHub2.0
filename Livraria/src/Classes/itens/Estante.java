@@ -1,55 +1,41 @@
 package Classes.itens;
 
+import java.util.ArrayList;
+
 public class Estante {
     //atributos
     private int capMaxima;
-    private Item[] itens;
+    private ArrayList<Item> itens = new ArrayList<>();
 
     //construtor cria um objeto
     //agregação tem um
     //composição é parte de um
     public Estante(int capMaxima) {
         setCapMaxima(capMaxima);
-        setItens(new Item[capMaxima]);
     }
 
     //métodos
     public boolean estanteCheia() {
-        return getCapMaxima() == quantidadeItens();
+        return this.quantidadeItens() == this.getCapMaxima();
     }
 
     public int quantidadeItens() {
-        int qtdItens = 0;
-        for(Item item : itens) {
-            if(item != null) {
-                qtdItens++;
-            }
-        }
-        return qtdItens;
+        return this.itens.size();
     }
 
     public Item buscarItem(String titulo) {
-        for(Item item : itens) {
-            if(item.getTitulo().equalsIgnoreCase(titulo)) {
-            return item;
-            }
-        }
-        return null;
+        return this.itens.stream().filter(i -> i.getTitulo().equalsIgnoreCase(titulo)).findFirst().orElse(null);
     }
 
     public boolean adicionarItem(Item item) {
-        for(int i = 0; i < itens.length; i++) {
-            if(itens[i] == null) {
-                return true;
-            }
+        if(!estanteCheia()) {
+           return this.itens.add(item);
         }
         return false;
     }
 
     public Item removerItem(int posicao) {
-        Item item = itens[posicao];
-        itens[posicao] = null;
-        return item;
+        return this.itens.remove(posicao);
     }
 
     //Getters & Setters
@@ -61,11 +47,11 @@ public class Estante {
         this.capMaxima = capMaxima;
     }
 
-    public Item[] getItens() {
+    public ArrayList<Item> getItens() {
         return this.itens;
     }
 
-    public void setItens(Item[] itens) {
+    public void setItens(ArrayList<Item> itens) {
         this.itens = itens;
     }
 }

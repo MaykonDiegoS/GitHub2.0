@@ -1,5 +1,7 @@
 package Classes.itens;
 
+import java.util.Scanner;
+
 public class DVD extends Item{
 
     private String diretor;
@@ -30,5 +32,21 @@ public class DVD extends Item{
 
     public void setAnoLancamento(int anoLancamento) {
         this.anoLancamento = anoLancamento;
+    }
+
+    @Override
+    public void montarDetalhes(Scanner in) {
+        System.out.print("Insira o nome do diretor: ");
+        this.setDiretor(in.nextLine());
+        System.out.print("Insira o tempo de duração: ");
+        this.setDuracao(in.nextDouble());
+        System.out.print("Insira o ano de lançamento: ");
+        this.setAnoLancamento(in.nextInt());
+        in.nextLine();
+    }
+
+    @Override
+    public void mostrarDetalhes() {
+
     }
 }

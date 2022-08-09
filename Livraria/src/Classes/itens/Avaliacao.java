@@ -1,10 +1,16 @@
 package Classes.itens;
 
+import java.time.LocalDateTime;
+
 public class Avaliacao {
 
     private double rating;
     private String nome, feedback;
+    private final LocalDateTime dataAvaliacao = LocalDateTime.now();
 
+    public LocalDateTime getDataAvaliacao() {
+        return dataAvaliacao;
+    }
     public double getRating() {
         return this.rating;
     }
