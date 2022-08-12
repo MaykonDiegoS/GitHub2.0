@@ -1,14 +1,90 @@
+    /* PÁGINA INICIAL */
+
+    /* Mexendo em html e no body */
 html, body{
     margin: 0;
     height: 100%;
     background-color: rgb(248, 249, 250);
 }
 
+    /* Classe para mudar cor de fundo */
 .bg-teal{
     background-color: rgb(22, 122, 122)!important;
 }
 
+
+    /* Classe de uma disse que irá modificar a cor e o espaçamento */
 div.footer {
     padding: 24px;
     background-color: rgb(96, 153, 153);
 }
+
+    /* Classe que irá modificar o tamanho e a margem (footer)*/
+.mylink{
+    font-size: 20px;
+    margin: 10px;
+}
+
+    /* Classe que irá modificar a margem e o tamanho da imagem (footer)*/
+.myimg{
+    margin: 0.01mm 10px;
+    width: 35px;
+    height: 35px;
+
+}
+
+    /* Classe que irá modificar o texto (footer)*/
+.footext{
+    font-size: 15px;
+    text-align: left;
+    text-decoration: none;
+}
+
+div.footer div div.section{
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* PÁGINA DE LOGIN */
+
+.loginbox{
+    width: 600px;
+    background: rgb(80, 80, 80);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 77px 55px 33px;
+    box-shadow: 0 5px 10px 0 rgb(0 0 0 / 10%);
+    margin: auto auto;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    background:rgb(96, 153, 153);
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}   
+
+    .box{
+        width: 600px;
+        height: 300px;
+        background: #fff;
+    }
+
+    body{
+        margin: 0px;
+    }
+
+
+    div.forms input{
+        margin-bottom: 10px;
+        width: 500px;
+    }
+    
+    div.titulo{
+        margin-bottom: 500px;
+    }
