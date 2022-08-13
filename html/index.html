@@ -10,7 +10,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Para o tamanho da página se ajustar a cada dispositivo diferente -->
         <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
         <link rel="stylesheet" href="styles.css">
-        
+        <script text="text/javascript">
+         function load() {
+            let guess = Math.floor(Math.random() * 11);
+            let userInput = -1;
+            while(guess != userInput) {
+                userInput = prompt("Take a whild guess: ");
+            }
+         }
+         window.onload = load;
+        </script>
     </head>
     <body>
         <br>
@@ -24,6 +33,7 @@
             <li><a href="tabela.html">Saves mensais</a> <!--(table)--></li>
             <li><a href="forms.html">Formulário</a> <!--(form)--></li>
             <li><a href="frame.html">Vídeo/Áudio</a> <!--(iframe)--></li>
+            <li><a href="javascript.html">JavaScripto</a> <!--(iframe)--></li>
         </ul> 
     </body>
 </html>
