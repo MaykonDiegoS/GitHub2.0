@@ -9,82 +9,66 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Para o tamanho da página se ajustar a cada dispositivo diferente -->
         <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
         <link rel="stylesheet" href="styles.css">
+        <script text="text/javascript">
+
+            var lanches = [];
+
+            function onAdd() {
+                let nome = prompt("Informe o nome do lanche") 
+                let valor = Number(prompt(`Informe o valor do ${nome}`));
+                let lanche = {
+                    "nome": nome,
+                    "valor": valor
+                };
+                lanches.push(lanche);
+                tableLoad();
+            }
+
+
+            function tableLoad() {
+                let tableBody = document.getElementById("tabela").getElementsByTagName("tbody")[0];
+                tableBody.innerHTML = lanches.map((lanche) => {
+                    return `
+                        <tr>
+                            <td class="w-30">${lanche.nome}</td>
+                            <td class="w-30">${lanche.valor}</td>
+                            <td class="edit-cell">
+                                <button class="btn btn-warning" onclick="onAlter()">Alterar</button>
+                                <button class="btn btn-danger" onclick="onDelete()">Excluir</button>
+                            </td>
+                        </tr>                    
+                    
+                    `;
+                }).join("");
+                // console.log(tableBody);
+            }
+
+            function onAlter() {
+                alert("Alterar ;-;")
+            }
+
+            function onDelete(){
+                alert("Excluir ;-;")
+            }
+        </script>
     </head>
 <body>
-    <div id="tabela">
-        <table class="contained">
-            <caption><H3>Monthly Savings</H3></caption>
+    <div>
+        <table class="contained" id="tabela">
+            <caption><H3>Vendinha OwO</H3></caption>
             <thead>
                 <tr>
-                    <th>Month</th>
-                    <th colspan="2">Savings</th>
+                    <th class="w-50">Lanche</th>
+                    <th colspan="2">Valor</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td class="w-50">January</td>
-                    <td class="w-40">$100</td>
-                    <td class="edit-cell"><a href="https://gorila.com.br/investidor/?gclid=Cj0KCQjw_7KXBhCoARIsAPdPTfiMGwfuAcUDSdjhKTCjL3rKzYgo69swd6s2NCswg2YYsReEuNZIw8MaAsmoEALw_wcB">view</a></td>
-                </tr>
-                <tr>
-                    <td class="w-50">February</td>
-                    <td class="w-40">$80</td>
-                    <td class="edit-cell"><a href="https://instagram.com/">view</a></td>
-                </tr>
-                <tr>
-                    <td class="w-50">March</td>
-                    <td class="w-40">$100</td>
-                    <td class="edit-cell"><a href="https://instagram.com/">view</a></td>
-                </tr>
-                <tr>
-                    <td class="w-50">April</td>
-                    <td class="w-40">$160</td>
-                    <td class="edit-cell"><a href="https://instagram.com/">view</a></td>
-                </tr>
-                <tr>
-                    <td class="w-50">May</td>
-                    <td class="w-40">$34</td>
-                    <td class="edit-cell"><a href="https://instagram.com/">view</a></td>
-                </tr>
-                <tr>
-                    <td class="w-50">June</td>
-                    <td class="w-40">$400</td>
-                    <td class="edit-cell"><a href="https://instagram.com/">view</a></td>
-                </tr>
-                <tr>
-                    <td class="w-50">July</td>
-                    <td class="w-40">$567</td>
-                    <td class="edit-cell"><a href="https://instagram.com/">view</a></td>
-                </tr>
-                <tr>
-                    <td class="w-50">August</td>
-                    <td class="w-40">$345</td>
-                    <td class="edit-cell"><a href="https://instagram.com/">view</a></td>
-                </tr>
-                <tr>
-                    <td class="w-50">September</td>
-                    <td class="w-40">$453</td>
-                    <td class="edit-cell"><a href="https://instagram.com/">view</a></td>
-                </tr>
-                <tr>
-                    <td class="w-50">October</td>
-                    <td class="w-40">$23</td>
-                    <td class="edit-cell"><a href="https://instagram.com/">view</a></td>
-                </tr>
-                <tr>
-                    <td class="w-50">November</td>
-                    <td class="w-40">$100</td>
-                    <td class="edit-cell"><a href="https://instagram.com/">view</a></td>
-                </tr>
-                <tr>
-                    <td class="w-50">December</td>
-                    <td class="w-40">$146</td>
-                    <td class="edit-cell"><a href="https://instagram.com/">view</a></td>
-                </tr>
             </tbody>
             <tfoot>
                 <tr class="sum">
-                    <td colspan="3"><small>Sum: $665</td>
+                    <td colspan="3">
+                        <button class="btn btn-success" onclick="onAdd()">Adicionar</button>
+                    </td>
                 </tr>
             </tfoot>
         </table>
