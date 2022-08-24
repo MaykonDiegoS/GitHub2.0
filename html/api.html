@@ -8,18 +8,44 @@
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript">
-          function loadCharList(){
-            let req = new XMLHttpRequest();
-            req.open("GET", "http://hp-api.herokuapp.com/api/characters", false);
-            req.send(null);
-            document.getElementById("charlist").innerHTML = 
-                JSON.parse(req.responseText).map(char=> `
-                    <li>${char.name}</li>
-            `).join("")
-          }  
+            function requestImg(text) {
+                let url = text == null || text == ""?
+                    `https://cataas.com/cat?json=true` :
+                    `https://cataas.com/cat/says/${text}?json=true`;
+
+                let req = new XMLHttpRequest();
+                req.open("GET", url, true);
+                req.onload = () => {
+                let img = document.getElementsByTagName("img")[0]
+                img.src = "https://cataas.com" + JSON.parse(req.responseText).url;
+                console.log(req.responseText);
+                img.onload = () => {
+                    Array.from(document.getElementsByTagName("button")).forEach((button) => button.disabled = false);
+                img.style="border: 12px ridge blue; border-radius:12px; margin:15px";
+                }
+           }
+           Array.from(document.getElementsByTagName("button")).forEach((button) => button.disabled = true);
+           req.send(null); 
+            }
+
+          function loadImg(){
+           requestImg();
+           }
+
+
+           function loadImgWithText(){
+            let texto = prompt("Digite o texto a ser inserido na imagem");
+            if(texto != null) {
+                requestImg(texto);
+            }
+           }
     </script>
 </head>
-<body onload="loadCharList()">
-    <ul id="charlist" style="font-size: 20px;"></ul>
-</body>
+<body style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    <img src />
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: row;">
+        <button style="border-radius: 8px; border: 15px groove rgb(17, 153, 112); background-color: rgb(75, 209, 191); font-size: 30px; color: black; margin: 10px;" onclick="loadImg()">Get CAT</button>
+        <button style="border-radius: 8px; border: 15px groove rgb(17, 153, 112); background-color: rgb(75, 209, 191); font-size: 30px; color: black; "onclick="loadImgWithText()">Get CAT with text</button>    
+    </div>
+   </body>
 </html>

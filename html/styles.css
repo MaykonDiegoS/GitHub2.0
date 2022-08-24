@@ -265,4 +265,18 @@ font-family: 'Poppins';
         margin: 0 auto;
         font-size: 5px; */
     }
-}   
+
+    .imgem{
+        border: 25px solid rgb(39, 39, 39);
+        border-radius: 12px;
+        margin-bottom: 50px;
+    }
+    .butoun{
+
+    }
+
+    body, html{
+        background-color: #8b8b8b;
+        margin: 0;
+        height: 100%;
+    }
