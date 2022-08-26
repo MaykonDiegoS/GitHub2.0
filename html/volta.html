@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>volta</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript">
+
+        var v = [];
+        var o = [];
+        var l = [];
+        var t = [];
+        var a = [];
+
+        var volta = [v, o, l, t, a];
+
+        var index = 0;
+        var wrong = 0;
+
+        function onCheck() {
+            let tentativa = prompt("Chuta: ")
+            tentativa = tentativa.toLowerCase();
+            let firstLetter = tentativa.charAt(0);
+            if(firstLetter === 'v' && volta[index] === v
+            || firstLetter === 'o' && volta[index+1] === o
+            || firstLetter === 'l' && volta[index+2] === l
+            || firstLetter === 't' && volta[index+3] === t
+            || firstLetter === 'a' && volta[index+4] === a
+            ){
+                alert(`Você pode ir para ${tentativa}`);
+                
+            }else{
+                alert(`você não pode ir para ${tentativa}`);
+            }
+            
+        }
+
+
+
+    </script>
+</head>
+<body>
+
+    <div>
+        <h2>Volta ao mundo</h2>
+    </div>
+    <div>
+        <input type="text" name="teste" id="input-txt">
+        <button onclick="onCheck()">Jogar</button>
+    </div>
+</body>
+</html>
