@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript">
 
-        var v = [];
-        var o = [];
-        var l = [];
-        var t = [];
-        var a = [];
+        var v = ["veneza", "venezuela", "vaticano"];
+        var o = ["ottawa", "omã", "orlando"];
+        var l = ["londres", "lituania", "los angeles"];
+        var t = ["tailandia", "tocantins", "taiwan"];
+        var a = ["argelia", "argentina", "afeganistao"];
 
         var volta = [v, o, l, t, a];
 
@@ -25,31 +25,49 @@
             tentativa = tentativa.toLowerCase();
             let firstLetter = tentativa.charAt(0);
             if(firstLetter === 'v' && volta[index] === v
-            || firstLetter === 'o' && volta[index+1] === o
-            || firstLetter === 'l' && volta[index+2] === l
-            || firstLetter === 't' && volta[index+3] === t
-            || firstLetter === 'a' && volta[index+4] === a
+            || firstLetter === 'o' && volta[index] === o
+            || firstLetter === 'l' && volta[index] === l
+            || firstLetter === 't' && volta[index] === t
+            || firstLetter === 'a' && volta[index] === a
             ){
-                alert(`Você pode ir para ${tentativa}`);
+                if(!volta[index].includes(tentativa)){
+                    volta[index].push(tentativa);
+                }
                 
-            }else{
-                alert(`você não pode ir para ${tentativa}`);
+                alert(`Você pode ir sim para ${tentativa}`);
+                index += 1;
+                wrong = 0;
+            } else{
+                wrong += 1;
+                if (wrong === 3){
+                    let ramdom = Math.floor(Math.random() * (volta[index].length))
+                    alert(`Você poderia ir para ${volta[index][ramdom]}. Agora tente a próxima viagem.`);
+                    index += 1;
+                    wrong = 0;
+                } else{
+                    alert(`Não é possível ir para ${tentativa}`);
+                }
             }
-            
+
+            if(index === 5){
+                index = 0;
+            }
         }
 
 
 
     </script>
 </head>
-<body>
-
-    <div>
-        <h2>Volta ao mundo</h2>
+<body style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    
+    <div style="margin: 40px 50px;">
+        <h2 id="titulo">Volta ao mundo</h2>
     </div>
-    <div>
-        <input type="text" name="teste" id="input-txt">
-        <button onclick="onCheck()">Jogar</button>
+
+        <img id="imagem" src="image-removebg-preview (1).png">
+
+    <div style="margin: 20px 20px;">
+        <button id="botao" onclick="onCheck()">Jogar</button>
     </div>
 </body>
 </html>

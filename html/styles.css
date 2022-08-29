@@ -271,12 +271,31 @@ font-family: 'Poppins';
         border-radius: 12px;
         margin-bottom: 50px;
     }
-    .butoun{
-
-    }
 
     body, html{
-        background-color: #8b8b8b;
+        background-color: #4ca3bd;
         margin: 0;
         height: 100%;
+    }
+
+    #imagem{
+        width: 30%;
+        margin: 5px 20px 40px 20px;
+    }
+
+    #botao{
+        font-size: 30px;
+        border-radius: 15px;
+        border: 6px solid black;
+        background-color: #377bbe;
+    }
+
+    #botao.btn.btn-danger:hover{
+        background-color: #004488;
+    }
+    
+    #titulo{
+        font-size: 60px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin: 10px 20px;
     }
