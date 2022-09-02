@@ -1,0 +1,39 @@
+int numeroSmall = goal % 5;
+  int numeroBig = (goal - numeroSmall)/5;
+  
+  if((big >= numeroBig) && (small >= numeroSmall)) {
+    return true;
+  }else{
+    return (goal - big*5)>0 && (goal - big*5) <= small;
+  }
+
+
+
+
+int current = 0;
+  for(int i = 0; i < big; i++) {
+    if(current+5 <= goal) {
+      current += 5;
+    }else{
+      break;
+    }
+  }
+  for(int i = 0; i < small; i++) {
+    if(current +1 <= goal) {
+      current++;
+    }else{
+      break;
+    }
+  }
+  return current == goal;
+
+
+timestamp - transforma data e hora em milisegundos e vice-versa
+
+Date
+
+Instant
+
+LocalDate
+LocalTime
+LocalDateTime 

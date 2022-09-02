@@ -1,0 +1,28 @@
+
+grid-column-start: 1
+	Vai começar na coluna 1
+grid-column-end: 6
+	Vai terminar na coluna 5
+
+grid-row-start: 1
+	Vai começar na linha 1
+grid-row-end: 6
+	Vai terminar na linha 5
+
+grid-column: 1/6
+	Vai pegar da coluna 1 e ir até a coluna 5 
+grid-row: 1/6
+	Vai pegar da linha 1 e ir até a linha 5
+	
+grid-template-columns: 20% 20% 20% 20% 20%
+grid-template-rows: 20% 20% 20% 20% 20%;
+grid-template-columns: repeat(5, 20%);
+grid-template-columns: repeat(8, 12.5%);
+grid-template-columns: 1fr 5fr
+	fração, nesse caso será dividido em 6 partes
+
+grid-area: 1/2/4/6
+
+Vai começar:
+	grid-row-start / grid-column-start / grid-row-end / grid-column-end
+		Linha que começa / Coluna que começa / Linha que termina / Coluna que termina

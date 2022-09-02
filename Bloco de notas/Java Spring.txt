@@ -1,0 +1,83 @@
+Spring Framework de desenvolvimento
+
+Conjunto de funções
+
+Notation
+	MetaDados
+
+POSTMAN
+
+Requisições mais trabalhadas no dia a dia
+
+GET
+	Retorna valores, busca informações (READ)
+POST
+	Cria informações novas, um elemento (CREATE)
+PUT
+	Atualização de informações (UPDATE) (Função principal) e cria caso não tenha identificação
+PATCH (?)
+	Atualização caso tenha identificador único, caso não tenha, ele não fará nada
+DELETE
+	Apagar informações (DELETE)
+
+HelloWorldRestController
+	Ele é o que inicia, controla a api Rest do nosso HelloWorld, ENTRADA, PONTO PRINCIPAL
+HelloWorldService - Visão
+HelloWorldEntity - Registro. Não se retorna (Pode ser informação que o front-end não precisa), a menos que precise dela toda
+HelloWorldRepository - Visão
+DTO - Data Transfer Object - Objeto de tranferência de dados
+	Instead of use entity, create a DTO
+UseEase - Visão
+
+
+Padrão MVC - Model view controller
+
+
+java
+	com.entra21.projeto
+		Main.java
+		controler
+		view
+		model
+
+Annotations
+
+	RestController
+	RequestMapping
+	Repository
+	Id
+	GetMapping
+
+Injeção de dependências
+
+
+Para colocar Annotations use @
+Para enviar JSON precisa de formatação
+Cada pasta em sua pasta, estrutura de pastas
+Digitação
+Nunca retorne entidade
+Ele tá bem poluído, fazendo comando dentro do controller e retornando entidade.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

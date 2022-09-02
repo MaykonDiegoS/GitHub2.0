@@ -1,0 +1,13 @@
+create - cria tabela
+
+alter - altera colunas, remove, renomea
+
+drop table - deleta a tabela
+alter drop - deleta a coluna
+
+truncate - apaga registros de uma tabela com espaços
+
+rename - junto com o alter
+
+
+MySQL - Deixa adicionar constraint

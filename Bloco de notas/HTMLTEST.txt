@@ -1,0 +1,382 @@
+						
+
+						-- Introdução ao que seria cada uma dos assuntos que serão tratados ao longo do Entra21--
+
+
+HTML - Corpo da página
+CSS - Estilo da página
+JavaScript - Script
+
+
+Meta tags
+Ling tags
+Script tags
+						-- Agora começa algumas informações bem úteis de algumas palavras e seus devidos significados.
+
+
+<!-- head --> comentário
+160 caracteres no máximo para a descrição
+
+Base - vai ter a referencia para que possar ser usado um link(não necessariamente precisa de uma base)
+
+Script- Para usar a programação em JavaScript
+	<noscript> avisa que a página pode não acessar corretamente sem o JavaScript </noscript>
+Link - especifica que ele usa um outro arquivo para o projeto
+	<a href="Aqui fica o site de referencia" target="_blank">Aqui fica o </a>
+
+
+							-- Aqui são algumas informações a respeito da imaagem e seu devido tamanho --
+
+
+	% - Transforma em porcentagem e mostra a imagem redimensionada
+	px - pixels
+	em - imagem relativa ao tamanho da fonte
+	
+										-- Mostrar elementos--
+	block
+	inline
+	hidden
+
+								-- Aqui começa algumas siglas a respeito de listas--
+-
+li = list item
+	Aqui vai os itens da lista
+ol = ordened list
+	ol type="" Aqui pode ser colocado I, A, ou 1 para mostrar o tipo
+		números romanos, alfabeto ou numerais
+	ol reverse="" Aqui coloca os números de trás para frente
+		1234 vira 4321
+	ol start="" Aqui mostra em qual número ele vai começar
+		se colocar 1300 ele vai começar no 1300
+ul = unordened list
+	Aqui vai ficar com as bolinhas que separam
+
+
+									-- Aqui mostra como é feita as tabelas--
+
+header
+	Onde fica a parte de cima da tabela com os nomes e afins
+corpo
+	Onde fica todo o conteúdo da tabela
+
+os dois são divididos em colunas
+os dois são divididos em linhas
+
+tr
+	table row - especifica uma linha da tabela
+th
+	table head
+td
+	table data
+
+<small>Sum: $180</small></td>
+	com o small ele vai fazer ficar na menor fonte possível de acordo com o site
+
+colspan="2"
+	significa que ele vai ter um tamanho de duas colunas 
+colspan="2" style="text-align: end;" 
+	significa que ele vai ter um tamanho de duas colunas e o estilo do alinhamento do texto vai ser para o final(para a direita).
+
+
+							--Aqui mostra como é feita o formulário para que o usuário possa inserir informações--
+
+<form></form>
+	abre para que vire um formulário
+
+inputs básicos
+	<input type="text"> 
+		recebe o que o usuário quiser digitar
+	<input type="number">
+		recebe números
+	<input type="number" step=".01">
+		pula os número na quantidade que lhe foi dia(padrão é any)
+
+
+<label for="Aqui vai o id que foi colocado no input">Aqui vai o Texto que vai aparecer para o usuário</label>
+	significa a etiqueta dentro do form.
+
+no input:
+	type/tipo
+		podendo ter vários tipos
+	name/nome
+		aqui vai ser o nome que vai ser usado de referencia no javaScript
+	id = identificador, aqui vai ser o id que vai ser usado de referencia dentro do próprio Visual Studio
+
+	<form>
+            <input type="text" id="txt">
+            <br>
+            <label for="num">Número: </label>
+            <input type="number" step=".01" id="num">
+            <br>
+            <label for="col">Cor: </label>
+            <input type="color" id="col">
+            <br>
+            <label for="date">Data: </label>
+            <input type="date" id="date">
+            <br>
+            <label for="pass">Senha: </label>
+            <input type="password" id="pass">
+            <br>
+            <label for="rd_1">Sim</label>
+            <input type="radio" name="radio" id="rd_1">
+            <br>
+            <label for="rd_2">Não</label>
+            <input type="radio" name="radio" id="rd_2">
+            <br>
+            <label for="ch_1">Batata</label>
+            <input type="checkbox" name="batata" id="ch_1">
+            <br>
+            <label for="ch_2">Feijão</label>
+            <input type="checkbox" name="feijão" id="ch_2">
+            <br>
+            <label for="ch_3">Arroz</label>
+            <input type="checkbox" name="arroz" id="ch_3">
+            <br>
+            <label for="sub">Enviar?</label>
+            <input type="submit" name="submit" id="sub">
+        </form>
+
+	<form>
+            
+            <h2>Nome completo</h2>
+            <br>
+            <label for="txt">Nome: </label>
+            <input type="text" id="txt" placeholder="Nome">
+            <br>
+            <h2>Número do seu cartão de crédito</h2>
+            <label for="num">Número: </label>
+            <input type="number" step=".01" id="num">
+            <br>
+            <h2>Cor do cartão</h2>
+            <label for="col">Cor: </label>
+            <input type="color" id="col">
+            <br>
+            <h2>Data de validade</h2>
+            <label for="date">Data: </label>
+            <input type="date" id="date">
+            <br>
+            <h2>Senha do cartão (4 dígitos)</h2>
+            <label for="pass">Senha: </label>
+            <input type="password" id="pass">
+            <br>
+            <h2>O Cartão tem limite autorizado?</h2>
+            <input type="radio" name="radio" id="rd_1">
+            <label for="rd_1">Sim</label>
+            <br>
+            <input type="radio" name="radio" id="rd_2">
+            <label for="rd_2">Não</label>
+            <br>
+            <h2>Sua comida favorita?</h2>
+            <input type="checkbox" name="batata" id="ch_1">
+            <label for="ch_1">Cachorro quente</label>
+            <br>
+            <input type="checkbox" name="feijão" id="ch_2">
+            <label for="ch_2">Cachorro frito</label>
+            <br>
+            <input type="checkbox" name="arroz" id="ch_3">
+            <label for="ch_3">Cachorro assado</label>
+            <br>
+            <br>
+            <label for="sub">Enviar seus documentos</label>
+            <input type="submit" name="submit" id="sub" value="Enviar!">
+            <br>
+            <a href="https://i.pinimg.com/736x/c4/64/5a/c4645a82f0294e93287b7e6c96e48a03.jpg" target="_blank"><button>Pegue seu prêmio de 20 mil reais</button></a>
+        </form>
+
+
+<div></div> - tem altura e largura proporcional ao conteúdo produzido nela
+
+									--Aqui começa a questão de colocar vídeo e áudio--
+<footer>
+	Precisa do controls para que seja controlável o vídeo/áudio
+
+            <audio controls>
+                <source src="" type="audio/mpeg">
+                Não tem áudio :c
+            </audio>
+
+            <video width="640" height="480" controls>
+                <source src="" type="video/mp4">
+                Não tem vídeo :c
+            </video>
+</footer>
+
+Incorporação direta do youtube
+	compartilhar -> incorporar(<>) -> copiar o link -> e colocar no VS
+		A única coisa que não pode mudar é o src, o allow, e o allowfullscreen
+<iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/bVzCZam6Xc8" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+
+								--Informações a respeito da página, e suas devidas especificações--
+
+Header - Cabeçalho, normalmente o maior que fica no topo do site
+Aside - A parte do site que não tem scroll
+Section - o que separa as coisas
+Article - o artigo que fica dentro de cada section
+Main - O que possui o três de cima tudo junto, o principal
+Foot - Rodapé, onde fica as informações da empresa por exemplo
+
+Conteinêrs 
+	Semânticas
+		div; header; nav; main; article; aside; section; footer.
+
+
+<footer>
+            <audio >
+                <source src="" type="audio/mpeg">
+                Não tem áudio :c
+            </audio>
+            <video width="640" height="480" >
+                <source src="" type="video/mp4">
+                Não tem vídeo :c
+            </video>
+        </footer>
+
+
+										-- Jeito de alterar o estilo--
+<body style="height: 100vh;">
+
+body{
+    /* background-color: blueviolet; */
+}
+
+p{
+    color: red;
+    margin-top: 0;
+}
+
+#par-gr{
+    color: green!important;
+}
+
+.white-txt{
+    color: white;
+} 
+
+
+Em linha <style>
+Interno <style> </style>
+Externo css
+
+Pode ser usado 
+	elemento = elemento especifico
+				p, body, div
+		
+	identificador = por um id especifico 
+				#qualquerNome
+		
+	classes = por uma classe 
+				.nomeDaClasse
+		 
+	* = universal
+
+	pseudoclasse - p:first-child{}
+			primeiro p encontrado no arquivo vai ter essas especificações
+	atributo - input[type="text"]{}
+			qual arquivo que tenha o tipo texto
+
+
+Se tem um style no p, ele vai ser usado, depois disso os ids, depois disso as
+pseudoclasses(ou inverte a regra, ou especifica muito mais), classes e por fim todos
+
+Se tiver algo marcado como !importante aquele que vai ser utilizado, mas se tiver mais de um, vai entrar na lista de prioridades de novo.
+
+					--ESPECIFICIDADE DE SELETORES--
+
+Estilo inline ( <div style=”color: red”> ) - Mais prioritário.
+ID ( #classe )
+Classe ( . classe )
+Seletor de elemento HTML ( div, input, body, etc.. .)
+Seletor universal ( * ) - Menos prioritário.
+
+					--EXCEÇÃO DE ESPECIFICIDADE DE SELETORES--
+	!important
+		o elemento vai ser tratado como importante e não será irá para a especificidade
+	:not 
+		todos os elementos serão mudados, exceto o que foi falado:
+							p:not a exceção serão os parágrafos
+
+
+display: none
+	ficará no dom, mas o usuário não poderá ver
+		pode ser trabalhado no html mas não aparecerá na página web os elementos como p
+
+display inline
+	html tratará ele como texto
+		tamanho:
+			line-height, font-size, text-align
+display block
+	Ele será tratado como um bloco
+		html pegará o que tem antes e o que tem depois
+			float, position para alinhar
+			heigth e width para definir tamanho
+display: inline-block
+	Ele ficará contido no seu parent, mas ainda será tratado como text
+		Será um bloco tratado como 'texto' e não como bloco
+
+display: flex
+	todos os elementos da minha página são flexíveis
+
+
+							--TRABALHANDO COM TABELA--
+borda
+	tamanho - tipo - cor
+
+padding é pra dentro do elemento
+margem é pra fora do elemento
+
+margin: 8 px 
+	significa que a margem vai ter 8 para todos os lados
+margin: 0 8px 
+	siginifica que a margem na vertical vai ter 0 px e na horizontal vai ter 8 (y, x)
+margin: 0 8px 4px 0 
+	significa que a margem vai indo no sentido horário
+margin-top: 8px
+	significa que só irá mudar em cima
+margin-bottom: 8px
+	siginifica que só irá mudar embaixo
+margin-right: 8px
+	siginifica que só irá mudar na direita
+margin-left: 8px
+	sigfnifica que só irá mudar na esquerda
+
+
+text-decoration: none;
+padding: 4px 8px;
+    margin: 2px 0;
+    display: inline-block;
+    color: white;
+    border: black;
+    border-radius: 4px;
+
+
+
+Media-query
+	Parecido com o @override do Java
+
+CSS reset
+	obsoleto, não é mais usado
+		
+
+CSS normalize
+	Um pouco mais usado, mas ainda deixa a desejar
+		Ele faz as modificações mais gerais para que fique agradável
+			pode tirar algo muito claro, para que não fique prejudicial
+	
+Viewport
+	largura da tela que o usuário tem
+
+
+Box Model
+	Colocar em forma de caixa
+
+ALT
+	Alternativa para quando a imagem não puder mais ser carregada, então será mostrado em forma de texto no código da página
+
+	

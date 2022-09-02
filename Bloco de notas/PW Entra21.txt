@@ -1,0 +1,20 @@
+Senha: JSM!jtMo8wdy
+
+Dbeaver
+
+MYSQL community
+No CMD: mysql
+Error 2003
+
+mysqld --initialize --console
+Salva a senha gerada
+
+mysqld --console
+Tem que aparecer ready for connections
+
+Abrir outro cmd
+mysql -u root -p
+Coloque sua password:
+
+"Welcome"
+
