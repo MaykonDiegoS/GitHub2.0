@@ -6,8 +6,8 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "franquia")
-public class FranquiaEntity{
+@Table(name = "genero")
+public class GeneroEntity {
     @Column(name = "id")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,5 +15,4 @@ public class FranquiaEntity{
 
     @Column(name = "nome", nullable = false)
     private String nome;
-
 }
