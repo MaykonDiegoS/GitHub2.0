@@ -1,7 +1,9 @@
 package com.entra21.primeiroprojetospring.controller;
 
+import com.entra21.primeiroprojetospring.model.dto.DvdListagemDTO;
 import com.entra21.primeiroprojetospring.model.entity.DvdEntity;
 import com.entra21.primeiroprojetospring.view.repository.DvdRepository;
+import com.entra21.primeiroprojetospring.view.service.DvdService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,10 +17,10 @@ import java.util.List;
 public class DvdRestController {
 
     @Autowired
-    private DvdRepository dvdRepository;
+    private DvdService dvdService;
 
     @GetMapping
-    public List<DvdEntity> getAllDvds() {
-        return dvdRepository.findAll();
+    public List<DvdListagemDTO> getDvds() {
+        return dvdService.getAll();
     }
 }
