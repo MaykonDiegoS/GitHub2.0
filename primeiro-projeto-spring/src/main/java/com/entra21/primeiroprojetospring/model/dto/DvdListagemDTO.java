@@ -8,6 +8,7 @@ import java.time.LocalTime;
 @Data
 public class DvdListagemDTO {
 
+    private String titulo;
     private String diretor;
     private LocalTime duracao;
     private Integer anoLancamento;

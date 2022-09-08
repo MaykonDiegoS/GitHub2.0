@@ -59,6 +59,34 @@ Nunca retorne entidade
 Ele tá bem poluído, fazendo comando dentro do controller e retornando entidade.
 
 
+JPA - Mapeamento passando pelo Hibernate do Banco de dados
+Hibernate - Mapeamento direto pelo banco de dados
+
+
+MVC
+
+Model - Entity
+	DTO
+
+View - Camada onde fica tudo que precisa de manipulação de dados
+	Repository
+	Service
+
+Controller - Indica o caminho
+	Controller
+	RestController
+	Webservice
+
+Data Repository - 
+
+Autowired
+	Instancia e deixa memória para que seja usado, assim não precisa dar new 'object'
+
+
+item/1/.....
+
+itens?idGenero=2&idFranquia=3
+
 
 
 

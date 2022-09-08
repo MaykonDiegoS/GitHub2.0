@@ -24,4 +24,9 @@ public class LivroEntity extends ItemEntity{
 
     @Column(name = "id_item")
     private Long itemId;
+
+    @Override
+    public String getType() {
+        return "Livro";
+    }
 }

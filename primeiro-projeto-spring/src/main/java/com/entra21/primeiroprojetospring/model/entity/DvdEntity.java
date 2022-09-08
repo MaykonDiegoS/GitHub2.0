@@ -24,5 +24,9 @@ public class DvdEntity extends ItemEntity{
     @Column(name = "id_item")
     private Long itemId;
 
+    @Override
+    public String getType() {
+        return "DVD";
+    }
 
 }

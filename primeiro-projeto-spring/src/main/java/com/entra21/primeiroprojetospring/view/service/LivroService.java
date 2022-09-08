@@ -18,6 +18,7 @@ public class LivroService {
     public List<LivroListagemDTO> getAll() {
         return livroRepository.findAll().stream().map(i -> {
             LivroListagemDTO dto = new LivroListagemDTO();
+            dto.setTitulo(i.getTitulo());
             dto.setAutor(i.getAutor());
             dto.setEdicao(i.getEdicao());
             dto.setAnoPublicacao(i.getAnoPublicacao());

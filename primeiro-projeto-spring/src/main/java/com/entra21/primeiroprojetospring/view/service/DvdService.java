@@ -18,6 +18,7 @@ public class DvdService {
     public List<DvdListagemDTO> getAll() {
         return dvdRepository.findAll().stream().map(i -> {
             DvdListagemDTO dto = new DvdListagemDTO();
+            dto.setTitulo(i.getTitulo());
             dto.setDiretor(i.getDiretor());
             dto.setAnoLancamento(i.getAnoLancamento());
             dto.setDuracao(i.getDuracao());

@@ -44,4 +44,6 @@ public abstract class ItemEntity {
             inverseJoinColumns = @JoinColumn(name = "id_genero")
     )
     private Set<GeneroEntity> generos;
+
+    public abstract String getType();
 }

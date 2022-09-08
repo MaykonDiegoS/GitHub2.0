@@ -11,3 +11,82 @@ rename - junto com o alter
 
 
 MySQL - Deixa adicionar constraint
+
+
+PARA ARRUMAR 
+alter table livro drop column id;
+alter table livro add constraint livro_pk primary key (id_item);
+alter table dvd drop column id;
+alter table dvd add constraint dvd_pk primary key (id_item);
+
+public void addFranquia(@RequestBody FranquiaPayloadDTO payloadDTO) {
+            franquiaPayLoadService.
+        }
+
+
+public ResponseEntity<FranquiaEntity> getFranquia(@PathVariable(name = "id") Long id) {
+            Optional<FranquiaEntity> franquia = franquiaRepository.findById(id);
+            if(franquia.isPresent()) {
+                return ResponseEntity.ok(franquia.get());
+            } else {
+                return ResponseEntity.notFound().build();
+            }
+        }
+
+
+public ResponseEntity<FranquiaDTO> getById(Long id){
+       Optional<FranquiaEntity> franquia = franquiaRepository.findById(id);
+       FranquiaDTO franquiaDTO = new FranquiaDTO();
+       if(franquia.isPresent()){
+           franquiaDTO.setId(franquia.get().getId());
+           franquiaDTO.setNome(franquia.get().getNome());
+           return ResponseEntity.ok(franquiaDTO);
+       }else{
+           return ResponseEntity.notFound().build();
+       }
+   }
+
+
+
+
+
+Genero
+
+@Autowired
+    private GeneroRepository generoRepository;
+
+    @GetMapping
+    public List<GeneroEntity> getFranquias(){
+        return generoRepository.findAll();
+    }
+
+    @PostMapping
+    public void addFranquia(@RequestBody GeneroEntity entity) {
+        generoRepository.save(entity);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<GeneroEntity> getGenero(@PathVariable(name = "id") Long id) {
+        Optional<GeneroEntity> genero = generoRepository.findById(id);
+        if(genero.isPresent()) {
+            return ResponseEntity.ok(genero.get());
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteGenero(@PathVariable(name= "id")Long id) {
+        generoRepository.deleteById(id);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<GeneroEntity> updateGenero(@PathVariable(name = "id")Long id, @RequestBody String novoNome) {
+        Optional<GeneroEntity> entity = generoRepository.findById(id);
+        if(entity.isPresent()) {
+            entity.get().setNome(novoNome);
+            return ResponseEntity.ok(generoRepository.save(entity.get()));
+        }else{
+            return ResponseEntity.notFound().build();
+        }
+    }
