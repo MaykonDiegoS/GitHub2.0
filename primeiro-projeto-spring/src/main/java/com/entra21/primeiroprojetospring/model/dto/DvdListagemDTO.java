@@ -12,5 +12,4 @@ public class DvdListagemDTO {
     private String diretor;
     private LocalTime duracao;
     private Integer anoLancamento;
-
 }
