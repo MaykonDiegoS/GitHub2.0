@@ -14,12 +14,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeroesFormComponent
   ],
   imports: [
-    CommonModule,
+    CommonModule, 
     ReactiveFormsModule
   ],
   exports: [
     HeroesScreenComponent
-  
   ]
 })
 export class HeroesModule { }

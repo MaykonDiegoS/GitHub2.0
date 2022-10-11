@@ -9,7 +9,7 @@ import { HeroesScreenComponent } from './heroes/heroes-screen/heroes-screen.comp
 import { HeroesModule } from './heroes/heroes.module';
 import { SizerComponent } from './sizer/sizer.component';
 import { FavoriteColorComponent } from './favorite-color/favorite-color.component';
-import {ReactiveFormsModule} from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import {ReactiveFormsModule} from '@angular/forms'
     FavoriteColorComponent
   ],
   imports: [
-    BrowserModule, 
+    BrowserModule,
     HeroesModule,
     ReactiveFormsModule
   ],

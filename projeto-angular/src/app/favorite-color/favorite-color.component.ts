@@ -4,12 +4,13 @@ import { FormControl } from '@angular/forms';
 @Component({
   selector: 'app-favorite-color',
   template: `
-  Favorite Color:
+  Favorite Color: 
   <input type="text" [formControl]="favoriteColorControl">
+  <p>Value: {{ favoriteColorControl.value }}<p>
   `
 })
-export class FavoriteColorComponent{
+export class FavoriteColorComponent {
 
-favoriteColorControl = new FormControl('');
+  favoriteColorControl = new FormControl('');
 
 }
